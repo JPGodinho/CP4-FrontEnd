@@ -1,103 +1,92 @@
-/* Paleta de Cores */
+/* Importação da fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Variáveis de cores para facilitar a manutenção */
 :root {
-    --purple-dark: #4b0082;
-    --blue-light: #87cefa;
-    --white: #ffffff;
-    --gray-light: #f8f9fa;
-    --text-dark: #212529;
+    --primary-color: #2F662F; /* Verde escuro para botões e links */
+    --secondary-color: #E8F5E9; /* Verde claro para fundo de seções */
+    --text-color: #333; /* Cor do texto padrão */
+    --light-color: #f8f9fa; /* Cor de fundo clara para navbar e cards */
 }
 
-/* Estilos gerais */
+/* Estilos globais */
 body {
-    background-color: var(--blue-light);
-    display: flex;
-    font-family: Arial, sans-serif;
-    padding-top: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-color);
 }
 
-.container {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-/* Estrutura da página 
-    Ajuste no cabeçalho e menu para ficarem como na imagem.
-    Bootstrap não tem sidebar nativo, então vamos criar um.
-*/
+/* Header/Navbar */
 .navbar {
-    background-color: var(--purple-dark) !important;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-top: 5px solid var(--blue-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para o menu lateral (sidebar) */
-.sidebar {
-    width: 250px;
-    background-color: var(--purple-dark);
-    color: var(--white);
-    height: 100vh;
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color) !important;
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
+.nav-link {
+    color: var(--primary-color) !important;
 }
 
-.sidebar li {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    text-decoration: underline;
 }
 
-.sidebar a {
-    color: var(--white);
-    text-decoration: none;
-    display: block;
+/* Carrossel */
+.carousel-item img {
+    height: 400px; /* Altura fixa para as imagens do carrossel */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }
 
-.sidebar a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+/* Títulos de Seções */
+h2 {
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
 }
 
-/* Estilos do conteúdo principal */
-.main-content {
-    margin-left: 250px; /* Cria um espaço para a sidebar */
-    flex-grow: 1;
-    padding: 20px;
+/* Cards de Produto */
+.card {
+    border: none;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Estilos dos cartões de notícia */
-.news-container {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.news-card {
-    background-color: var(--white);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.news-card:hover {
+.card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.news-image {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin-bottom: 15px;
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: var(--secondary-color);
+    border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Botões */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #4CAF50; /* Um tom de verde um pouco diferente */
+    border-color: #4CAF50;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color) !important;
 }
