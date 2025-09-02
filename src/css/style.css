@@ -1,22 +1,18 @@
-/* Importação da fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Variáveis de cores para facilitar a manutenção */
 :root {
-    --primary-color: #2F662F; /* Verde escuro para botões e links */
-    --secondary-color: #E8F5E9; /* Verde claro para fundo de seções */
-    --text-color: #333; /* Cor do texto padrão */
-    --light-color: #f8f9fa; /* Cor de fundo clara para navbar e cards */
+    --primary-color: #2F662F;
+    --secondary-color: #E8F5E9;
+    --text-color: #333;
+    --light-color: #f8f9fa;
 }
 
-/* Estilos globais */
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
     background-color: var(--light-color);
 }
 
-/* Header/Navbar */
 .navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -35,20 +31,17 @@ body {
     text-decoration: underline;
 }
 
-/* Carrossel */
 .carousel-item img {
-    height: 400px; /* Altura fixa para as imagens do carrossel */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    height: 400px;
+    object-fit: cover;
 }
 
-/* Títulos de Seções */
 h2 {
     font-weight: 700;
     color: var(--primary-color);
     text-transform: uppercase;
 }
 
-/* Cards de Produto */
 .card {
     border: none;
     transition: transform 0.3s ease-in-out;
@@ -74,7 +67,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Botões */
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -82,11 +74,19 @@ h2 {
 }
 
 .btn-primary:hover {
-    background-color: #4CAF50; /* Um tom de verde um pouco diferente */
+    background-color: #4CAF50;
     border-color: #4CAF50;
 }
 
-/* Footer */
 footer {
     background-color: var(--primary-color) !important;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-title a:hover {
+    color: var(--primary-color);
 }
